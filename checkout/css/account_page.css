@@ -1,0 +1,536 @@
+/* cart summary Box is same as on cart page its css is on cart summary css file */
+
+/* All other css of this account page is Here */
+:root{
+
+  --checkout_process_border_color:rgba(0, 0, 0, 0.08);
+  --checkout_process_bg_color:#ffffff;
+  --checkout_process_heading_color:#000000;
+  --checkout_process_text_color: rgba(0, 0, 0, 0.7);
+ 
+  --checkout_process_forms_guest_checkout_btn_bg_color:#212121;
+  --checkout_process_forms_guest_checkout_btn_text_color:#ffffff;
+
+
+  --checkout_process_heading_font_family:"Playfair Display", serif;
+  --checkout_process_content_font_family:"Inter", sans-serif;
+
+
+  --checkout_process_forms_bg_color:#f6f6f6;
+  --checkout_process_forms_heading_color:#212121;
+  --checkout_process_forms_text_color:rgba(0,0,0,0.7);
+  --checkout_process_forms_text_color_two:#ffffff;
+  --checkout_process_forms_active_color:#0f994b;
+  --checkout_process_forms_divider_lines_color:rgba(0, 0, 0, 0.4);
+
+   --checkout_process_forms_input_border_color:rgba(0, 0, 0, 0.16);
+   --checkout_process_forms_input_text_color:rgba(0, 0, 0, 0.7);
+   --checkout_process_forms_input_bg_color:#f6f6f6;
+
+   
+   --checkout_process_forms_google_signin_btn_bg_color:#ffffff;
+   --checkout_process_forms_google_signin_btn_text_color:#212121;
+   --checkout_process_forms_google_signin_btn_shadow_color:rgb(0 0 0 / 12%);
+
+
+/* --account_forget_password_popup variables */
+--account_forget_password_popup_bg_color:#FFFFFF;
+--account_forget_password_popup_heading_color:#212121;
+--account_forget_password_popup_btn_bg_color:#0f994b;
+--account_forget_password_popup_btn_text_color:#ffffff;
+--account_forget_password_popup_input_text_color:rgba(0, 0, 0, 0.7);
+--account_forget_password_popup_input_border_color:rgba(0, 0, 0, 0.16);
+--account_forget_password_popup_input_bg_color:#f6f6f6;
+
+/* font family variables  */
+
+--checkout_process_forms_heading_font_family:"Playfair Display", serif;
+--checkout_process_forms_text_font_family:"Inter", sans-serif;
+
+}
+
+
+
+* {
+  -web-kit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+.check_out_option_section {
+  float: left;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0px 10px;
+  padding-top: 40px;
+}
+.checkout_process_form_container {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.check_out_option_form_box {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px 30px;
+  width: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: ". .";
+}
+
+/*account login/create section start */
+
+.check_out_option_account_form_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 30px;
+  width: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: ". .";
+}
+.check_out_option_form_box_one_content {
+  background: var(--checkout_process_bg_color);
+  padding: 32px 23px;
+  width: 100%;
+  display: grid;
+  float: left;
+  gap: 25px 0px;
+  border: 1px solid var(--checkout_process_border_color);
+  border-radius: 4px;
+}
+.check_out_option_form_box_one_content_header {
+  display: grid;
+  flex-direction: column;
+  gap: 7px 0px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.check_out_option_form_box_one_content_header h3 {
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: capitalize;
+
+  color: var(--checkout_process_heading_color);
+  margin: 0px;
+  font-family: var(--checkout_process_forms_heading_font_family);
+  text-align: center;
+}
+.check_out_option_form_box_one_content_header p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color:var(--checkout_process_text_color);
+  margin: 0px;
+}
+.check_out_option_form_box_one_guest_btn a {
+  background: var(--checkout_process_forms_guest_checkout_btn_bg_color);
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--checkout_process_forms_guest_checkout_btn_text_color);
+  display: flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.check_out_option_form_box_one_guest_btn a span {
+  transition: all 0.5s ease;
+}
+.check_out_option_form_box_one_guest_btn a:hover {
+  color: #ffffff;
+  background: #212121;
+  text-decoration: none;
+}
+.check_out_option_form_box_one_guest_btn a:hover span {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+.check_out_option_form_box_one_account_btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.check_out_option_form_box_one_account_btn p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: var(--checkout_process_text_color);
+  margin: 0px;
+padding-bottom: 4px;
+}
+.check_out_option_form_box_one_account_btn a{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--checkout_process_heading_color);
+  text-decoration: underline !important;
+}
+
+
+.check_out_option_form_box_two_content {
+  background: var(--checkout_process_bg_color);
+  padding: 32px 24px;
+  width: 100%;
+  display: grid;
+  float: left;
+  gap: 25px 0px;
+  border: 1px solid var(--checkout_process_border_color);
+  border-radius: 4px;
+  gap: 25px 0px;
+
+}
+.check_out_option_form_box_two_content_header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.check_out_option_form_box_two_content_header h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 36px;
+  text-transform: capitalize;
+  color: var( --checkout_process_forms_heading_color);
+  margin: 0px;
+  font-family:var(--checkout_process_forms_heading_font_family);
+  text-align: center;
+}
+.check_out_option_form_box_two_content_signin_form {
+  display: grid;
+  gap: 15px 0px;
+  width: 100%;
+  margin-bottom: 9px;
+}
+.check_out_option_box_two_signin_form_input_fields {
+  display: grid;
+  gap: 4px 0px;
+}
+.check_out_option_box_two_signin_form_input_fields input {
+  border: 1px solid var( --checkout_process_forms_input_border_color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  color:var( --checkout_process_forms_input_text_color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: var( --checkout_process_forms_input_bg_color);
+}
+.check_out_option_box_two_signin_form_input_fields input:focus-visible {
+  border: 1px solid var( --checkout_process_forms_input_border_color) !important;
+}
+.check_out_option_box_two_signin_form_input_fields input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: capitalize;
+  color: var( --checkout_process_forms_input_text_color);
+}
+.check_out_option_box_two_signin_form_signin_btn button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: capitalize;
+  color:var(--checkout_process_forms_text_color_two);
+  background: var(--checkout_process_forms_active_color);
+  border-radius: 4px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: unset;
+}
+.check_out_option_form_box_two_google_signin_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check_out_option_form_box_two_google_signin_btn a {
+  background: var(--checkout_process_forms_google_signin_btn_bg_color);
+  box-shadow: 0px 4px 24px var(--checkout_process_forms_google_signin_btn_shadow_color);
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check_out_option_form_box_two_google_signin_btn a span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: capitalize;
+  color: var(--checkout_process_forms_google_signin_btn_text_color);
+  padding-left: 6px;
+}
+.check_out_option_form_box_two_account_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.check_out_option_form_box_two_account_btn p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: var(--checkout_process_forms_text_color);
+  margin: 0px;
+ display: flex;
+ align-items: center;
+}
+.check_out_option_form_box_two_account_btn p a {
+  color: var(--checkout_process_forms_active_color);
+  padding-right: 4px;
+}
+.check_out_option_form_box_two_account_btn p i {
+  color:  var(--checkout_process_forms_active_color);
+  padding-right: 4px;
+}
+.check_out_option_box_two_form_divider {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+.check_out_option_box_two_form_divider a{
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+color: var(--checkout_process_forms_text_color);
+}
+.check_out_option_box_two_form_divider {
+  width: 100%;
+}
+ .form_divider_lines{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+ .form_divider_lines span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--checkout_process_forms_text_color);
+  margin-bottom: 3px;
+}
+.form_divider_lines small {
+  flex-grow: 5;
+  line-height: 0;
+  text-align: center;
+position: relative;
+  padding: 0px 10px 0px 15px;
+}
+ .form_divider_lines small:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid var(--checkout_process_forms_divider_lines_color);
+}
+
+
+/*account login/create section End */
+
+/* media query for account login/create section Start */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .check_out_option_form_box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 767px) {
+  .check_out_option_form_box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .check_out_option_account_form_box {
+    grid-template-columns: 1fr;
+    grid-template-areas: ".";
+  }
+}
+@media (max-width: 540px) {
+  .check_out_option_form_box_two_content {
+    padding: 45px 20px;
+  }
+}
+@media (max-width: 400px) {
+ 
+}
+/* media query for account login/create section End */
+
+ 
+/* account_forget_password_popup stye start */
+
+.account_forget_password_container{
+  max-width: 560px !important;
+  margin: 20px auto !important;
+  padding: 0px 20px !important;
+}
+.account_forget_password_popup{
+  background: var(--account_forget_password_popup_bg_color);
+  border-radius: 4px;
+ padding: 32px 15px 72px 15px;
+ display: flex;  
+ align-items: center;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+pointer-events: auto;
+}
+#account_forget_password_popup{
+  padding: 0px !important;
+}
+
+.account_forget_password_popup_des{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+  flex-direction: column;
+  text-align: center;
+}
+.account_forget_password_popup_des h5{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25px;
+  color: var(--account_forget_password_popup_heading_color);
+  margin: 0px;
+  padding-bottom: 9px;
+}
+.account_forget_password_popup form{
+  width: 100%;
+}
+
+.account_forget_password_popup_input{
+  display: flex;
+width: 100%;
+justify-content: center;
+flex-direction: column;
+max-width: 370px;
+margin: 0 auto;
+}
+.account_forget_password_popup_input_field{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 15px;
+}
+.account_forget_password_popup_input_field input{
+  background: var(--account_forget_password_popup_input_bg_color);
+  border: 1px solid var(--account_forget_password_popup_input_border_color);
+  border-radius: 2px;
+  height: 44px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: var(--account_forget_password_popup_input_text_color);
+  padding-left: 15px;
+  width: 100%;
+}
+.account_forget_password_popup_input_field label.error{
+  font-size: 12px;
+  color: red;
+  margin: 0px;
+  padding-top: 5px;
+
+}
+.account_forget_password_popup_btn{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+ width: 100%;
+}
+.account_forget_password_popup_btn a{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: capitalize;
+  color: var(--account_forget_password_popup_btn_text_color) !important; 
+  background: var(--account_forget_password_popup_btn_bg_color);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 44px;
+}
+@media (max-width: 540px) {
+  .account_forget_password_popup_input {
+      flex-direction: column;
+      align-items: center;
+  }
+  .account_forget_password_popup_input_field label.error {
+      text-align: center;
+  }
+  .account_forget_password_popup_btn {
+      padding-left: 0px;
+      padding-top: 15px;
+  }
+
+}
+@media (max-width: 767px) {
+  .account_forget_password_container  {
+    margin: 20px auto !important;
+  }
+}
+/* account_forget_password_popup stye end  */
